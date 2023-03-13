@@ -1,0 +1,72 @@
+------------------------1--------------------------------------
+PEM
+ format was developed for storing public and private keys in 
+files
+ , while 
+DER
+ is a 
+binary
+ format intended for applications in which a unique octet string encoding is needed, which is the case with cryptographic 
+signatures
+ .
+ -----------------------2--------------------------------------
+ A variety of encoding methods are used in Bitcoin, some of which were created for Bitcoin. These methods were created and/or chosen for their 
+utility
+ and 
+efficiency
+ rather than 
+ease of use
+ as every byte in a transaction incurs a 
+cost
+ and errors can mean 
+lost
+ money.
+ -------------------------3--------------------------------------
+ c.
+The checksum is the first 4 bytes of a double SHA256 hash of the encoded address.
+-----------------------------------4----------------------------
+Base58 encoding was created for Bitcoin to help prevent the mistyping of Bitcoin 
+addresses
+ . Base58 used with address 
+checksums
+ helps to prevent the accidental 
+loss
+ of funds.
+ ----------------------------5----------------------------------
+ To prevent typos and errors, Bitcoin uses 
+Base58Check
+ encoding for Bitcoin 
+addresses
+ . This adds a 
+checksum
+ which is an additional four bytes added to the end of an address that is derived from the 
+hash
+ of the data and can be used to detect and prevent typing errors.
+ -------------------------------6-------------------------------
+ c.
+It is how blocks are linked, or cryptographically chained together.
+-------------------------7----------------------------------------
+a.
+Block height, confirmations, and the Merkle root.
+---------------------------------8-------------------------------
+d.
+Block height represents a block's position in the blockchain.
+------------------------------9-------------------------------------
+Base58
+ is a new data encoding format, while 
+hex
+ encoding is very common in computer programming. As such it is often necessary to import libraries for working with 
+Base58
+ but many programming languages will have functions for working with 
+hex
+ .
+ --------------------------------10----------------------------------
+ As computers use binary, a 
+base 2
+ system. Most people are used to the 
+base 10
+ decimal system. Hex is a 
+base 16
+ system that provides a human-friendly way to represent 
+binary
+ values.
