@@ -1,0 +1,95 @@
+-------------1----------------  
+Bitcoin uses a variety of cryptographic functions, including 
+signatures
+ for signing and 
+hashes
+ for a variety of uses, but interestingly does not use 
+encryption
+ . All data on the network is 
+public
+
+-----------------------2-------------------------------
+encryption
+ is used to hide or obscure data, 
+digital signatures
+ are used to authenticate data, and 
+hashing
+ is often used to give a unique identifier to data.
+ ---------------------------3------------------------------
+ When using 
+symmetric
+ encryption one key is shared between the parties, and that key is used to both encrypt and decrypt a message. When using 
+asymmetric
+ encryption, two keys (the public key and the private key) are used. The 
+public
+ key is used to encrypt the message, and the 
+private
+ key is used to decrypt the message.
+ ---------------------------4------------------------------
+ d.
+Asymmetric encryption involves the use of two keys, a public key that can be openly shared and a private key that must be kept private
+-------------------------5-------------------------------------
+A 
+private
+ key is essentially a very big number, and the corresponding 
+public
+ key is derived from it. The private key must always be kept 
+secret
+ , while the public key can be 
+shared
+ .
+ --------------------------6-------------------------------
+ b.
+Public keys are designed to be public. It is fine and often necessary to share public keys.
+----------------------------7-----------------------------
+private
+ keys are used extensively in Bitcoin. Private keys are used to derive 
+public
+ keys which in turn are used to derive Bitcoin 
+addresses
+ . Bitcoin transactions are 
+signed
+ with private keys and validated using public keys.
+ -----------------------------8----------------------------
+ private
+ keys and who holds them is a very important consideration when selecting a Bitcoin 
+wallet
+ . The person or entity who holds the 
+private
+ keys is the person or entity who can 
+sign
+ a transaction to move funds.
+ -------------------------------9----------------------------------------
+ The original form of Bitcoin 
+addresses
+ is derived from a 
+public
+ key using a one-way function. The 
+public
+ key goes through a 
+hashing
+ process that produces a pay to public key hash, P2PKH, address.
+ ---------------------------------10----------------------------------------------------------
+ Bitcoin public and private keys are created using 
+Elliptic Curve
+ cryptography, which uses a large number, the 
+private key
+ to create the 
+public key
+ by multiplying that large number by the 
+generator point
+ .
+ ----------------------------11---------------------------------------
+ Import the packages and functions necessary for encryption/decryption
+ Create or important message to be encrypted
+ Generate a key pair
+ Encrypt the message using the generated public key
+ Decrypt the message using the private key
+ ----------------------------12----------------------------------------
+ To 
+encrypt
+ data to be read only by a specific person or entity you will need the 
+public
+ key that corresponds to that person or entity's 
+private
+ key.
