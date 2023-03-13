@@ -1,0 +1,84 @@
+----------------------------------1-----------------------
+A transaction is valid if it meets with the network 
+consensus
+ rules and is not a 
+double-spend
+ . Transaction 
+scripts
+ are run and if the execution is 
+successful
+ , including any 
+signature
+ validation, etc, the transaction is considered 
+valid
+ and will continue to be 
+propagated
+ through the network.
+ ------------------------------------2------------------------
+ Pay to Public Key Hash, or 
+P2PKH
+ , is one of the 
+original
+ and perhaps simplest forms of a Bitcoin transaction. The unlocking script for a 
+P2PKH
+ requires presenting a 
+public
+ key and a digital 
+signature
+ created by the corresponding 
+private
+ key.
+ -----------------------------------3---------------------------
+ Bitcoin transactions are all about locking and unlocking. Each Unspent Transaction Output, or UTXO, will have a 
+locking
+ script. When a transaction is being validated the UTXO is retrieved with the 
+locking
+ script then the locking and unlocking scripts are executed 
+together
+ .
+ ----------------------------------4----------------------------
+ There are a variety of Bitcoin transaction types, including Pay to Public Key Hash (P2PKH) and Pay to Script Hash (P2SH). 
+P2PKH
+ is one of the original forms of transactions, but 
+P2SH
+ allows a wide variety of additional transaction types such as advanced multi-sig transactions.
+ ----------------------------------------5------------------------------
+ c.
+Satoshis, the smallest Bitcoin unit
+----------------------------------6-----------------------------------
+The 
+mempool
+ is essentially a waiting room for validated transactions. It is maintained separately by nodes who are keeping an eye on network data. When a node sees a new transaction it will fully validate it, and if valid, will store it in the 
+mempool
+ until they can see that it has been included in a 
+block
+ .
+ ---------------------------------7---------------------------------------
+ Miners start the mining process with a block containing just the appropriate header data and the 
+coinbase
+ transaction, they then start adding already 
+validated
+ transactions from their 
+mempool
+ , preferring transactions with higher 
+fees
+ .
+ ---------------------------------------8--------------------------------------
+ Bitcoin script can be a bit difficult to get used to. It's not what most developers are familiar with. It is 
+stack-based
+ and uses 
+reverse-polish
+ notation, where parameters and 
+operators
+ are presented in the opposite order to what most developers are familiar with.
+ -------------------------------------------9----------------------------------------
+ Bitcoin's script uses parameters and 
+operators
+ , which use the prefix 
+OP
+ to denote them as 
+operators
+ . However, you may see Bitcoin script written with the prefix dropped since it is often redundant.
+ -------------------------------------------10-----------------------------------------------
+ d.
+P2SH transactions simplify complex locking scripts, making them much more usable.
