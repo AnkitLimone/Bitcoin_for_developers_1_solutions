@@ -1,0 +1,61 @@
+--------------------1--------------------------------
+Hashing serves a number of purposes. Hashing algorithms can be used to verify message 
+integrity
+ , is a part of a lot of 
+signature
+ generation algorithms, is commonly used for password 
+verification
+ , is used as a file 
+identifier
+ , and in Bitcoin, it is a big part of the 
+Proof-of-Work
+ process.
+ ---------------------2-----------------------------------
+ Hashes are often used to provide trust in a message's 
+integrity
+ . A hash of a file can be provided from a trusted source which allows anyone downloading that file to hash it and check that it 
+matches
+ the published hash. This allows for the quick detection of any 
+alteration
+ to the file.
+ ----------------------3---------------------------------
+ In the Bitcoin mining process, miners create a header for their block of transaction data which will be 
+hashed
+ in the Proof-of-Work process. This header consists of version, previous 
+block hash
+ , 
+Merkle root
+ , timestamp, the current difficulty target, and the nonce used.
+ -----------------------------4--------------------------
+ c.
+The difficulty target is the required amount of zeros that a block hash must start with
+-------------------------------5---------------------------------
+One of the ways Bitcoin uses hashing to summarize data is in 
+Merkle trees
+ which are summaries of all of the 
+transactions
+ in a 
+block
+ .
+ ---------------------------6-------------------------------------
+ a.
+Mining and Merkle trees
+------------------------------7------------------------------
+d.
+The output of the hash function.
+------------------------------------------8-------------------------
+a.
+The same data run through the same hashing algorithm will always produce the same output.
+----------------------------9------------------------------
+b.
+Even a small change to any of the transactions in the tree will result in a different Merkle root.
+----------------------------10-----------------------------
+As Merkle trees can be used to summarize data, they can be used in Bitcoin blocks to prove that a 
+transaction
+ is in a block. To do so you only need to produce a small amount of data constituting an authentication path or 
+Merkle path
+ connecting the specific 
+transaction
+ to the 
+root
+ of the tree.
