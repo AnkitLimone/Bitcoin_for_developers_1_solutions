@@ -1,0 +1,74 @@
+-------------------------------------1--------------------------------
+Every time a node validates a transaction it checks it against all the consensus rules. The node checks that the funds haven't already been 
+spent
+ by looking for the inputs in its 
+UTXO
+ set. It checks if the amount being transferred is greater than 
+0
+ and less than 
+21 million
+ Bitcoin. It checks if the amounts in the 
+inputs
+ are greater or equal to the 
+outputs
+ . It checks the scripts on the inputs and outputs, and so on.
+ --------------------------------2--------------------------------------
+ Bitcoin's network architecture is peer-to-peer. All nodes share the same data. As such, every node must validate 
+every transaction
+ . This creates a 
+decentralized
+ network with no points of failure.
+ --------------------------------3----------------------------------
+ c.
+Independent selection of the chain with the most cumulative proof-of-work
+------------------------------4-----------------------------------------
+Maintaining network consensus through a software update can be tricky. In an upgrade process, there is sometimes the risk of a network fork. But some types of network forks are much more concerning than others. A 
+hard fork
+ will potentially split the network if not all nodes are updated, while a 
+soft fork
+ allows un-updated nodes to remain on the network. As such, an update that only requires a 
+soft fork
+ will be much less controversial than an update that may result in a 
+hard fork
+ .
+ --------------------------------5-------------------------------------------
+ There are many methods for updating consensus rules. Many methods have been tried and there is still debate around which methods are best. Some methods involve miner signaling, while others use block versions. Some updates may require a controversial 
+hard fork
+ , while thankfully many others can be achieved with a 
+soft fork
+ .
+ ---------------------------------------6---------------------------------------
+ In a decentralized network with no one entity in control, the question is often asked, why can someone spend the same value twice? This is referred to as a 
+double-spend
+ , and with no one entity in charge of coordinating value transfer on the network, another process has to fulfill this role. In Bitcoin, the 
+mining
+ process prevents this issue. When miners have conflicting data, the "winning" 
+miner's
+ version of history becomes the truth on the network.
+ -----------------------------------------7----------------------------------------
+ The Bitcoin mining process relies on hashing, specifically the 
+SHA256
+ hashing algorithm. This process produces a 256 bit 
+fingerprint
+ for the data input into the function in such a way that the output can not be guessed, but that the results can be very quickly 
+verified
+ .
+ ------------------------------------------------8-------------------------------------
+ a.
+The Bitcoin software
+------------------------------------9-------------------------------
+We've discussed how a miner deals with conflicting transaction data, but how do they deal with conflicting block data? When a miner sees two versions of the same block or is looking at a split in the network, it has to decide which block to build on top of. In this case, a miner will choose to build on top of the block with the most 
+cumulative
+ Proof-of-Work. This is either the block with the most 
+Proof-of-Work
+ or the 
+longest
+ chain of blocks.
+ -------------------------------------------10-----------------------------------
+ Consensus is achieved and maintained on the Bitcoin network because all nodes are running either the same or compatible software. To maintain the consensus all the nodes on the network need to go through a number of processes in alignment with each other. One of these processes is updating the mining 
+difficulty
+ target. Due to this, all nodes run the same algorithm at nearly the exact same time, every 
+2016
+ blocks. As all nodes see the same 
+data
+ and run the same calculation, they should all reach the same result.
