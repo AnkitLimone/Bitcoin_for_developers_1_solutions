@@ -1,0 +1,72 @@
+-------------------------------1----------------------------------
+The validity of consensus rules is determined by 
+nodes
+ , not 
+miners
+ . 
+Miners
+ do the work of sequencing transactions, while 
+nodes
+ do the work of enforcing consensus rules.
+ -----------------------------2--------------------------------
+ b.
+Added privacy: you do not have to trust third parties, and you are able to participate in network consensus
+-----------------------------3-----------------------------------
+There are three Bitcoin networks that you can choose to run your node on. The 
+mainnet
+ is what we think of as THE Bitcoin network. Transactions there carry real value. The 
+testnet
+ is for testing applications. Transactions there carry no real monetary value. The 
+regtest
+ network is essentially your own personal Bitcoin network. You can run it just on your machine, or share it with others. This network is often the first place an application is tested.
+ ---------------------------4------------------------------------------------
+ Configuration for a Bitcoin core node is handled in the 
+Bitcoin.conf
+ file. Here you can set options such as where to store 
+blockchain
+ data, decide which 
+network
+ to run on, enable an 
+RPC
+ server, and many other options
+ ------------------------------------------5---------------------------------
+ HD
+ wallets have many advantages over 
+JBOK
+ wallets as they allow for the backing up of all the keys created by the wallet with one piece of 
+static
+ data
+ -----------------------------------6------------------------------------------------------------
+ A Bitcoin wallet serves a number of functions for a user. It provides a user 
+interface
+ , it tracks the user's 
+balance
+ , it creates and 
+signs
+ transactions, and perhaps most importantly, it manages a user's 
+private
+ keys.
+ ----------------------------------7-------------------------------
+ a.
+A set of words that represents a seed to derive a deterministic wallet
+-------------------------------------8-----------------------------------
+A Bitcoin wallet has four primary functions, generate and 
+store
+ keys, 
+construct
+ transactions, 
+sign
+ transactions with keys, and track transactions for the user. We can perform all of these functions using Bitcoin-cli commands. For example, we can use the Bitcoin-cli 
+signrawtransactionwithwallet
+ command to sign a transaction that we have constructed.
+ ------------------------------9----------------------------------
+ The Bitcoin-cli tool allows us to interact with the Bitcoind wallet on the command line. We have a wide variety of commands available to us here such as 
+getnewaddress
+ to generate new addresses, 
+gettransaction
+ to retrieve transaction data, and 
+sendrawtransaction
+ to broadcast signed transactions to the network.
+ ---------------------------------------10-------------------------------
+ b.
+Select outputs from a previous transaction to use
