@@ -1,0 +1,67 @@
+------------------1-------------------------
+As only the person or entity in possession of the 
+private
+ key can create the signature necessary to produce a 
+valid
+ transaction, cryptographic signatures help to prevent 
+fraudulent
+ Bitcoin transactions.
+ --------------------------2-----------------------
+ One of the benefits of transaction 
+signatures
+ is 
+nonrepudiation
+ . This proves proof of 
+authorization
+ .
+ ---------------------3------------------------------
+ a.
+In Elliptic curve math, addition and multiplication work roughly the same as in normal arithmetic, but there is no subtraction or division
+--------------------------4---------------------------
+Validating a digital signature requires the original 
+message
+ , the 
+signature
+ , and the 
+public
+ key.
+ -----------------------------------5---------------------
+ 
+c.
+The message to be signed, and a private key
+-----------------------6---------------------------------
+Signatures are vital to Bitcoin as they prevent 
+fraudulent
+ transactions by providing a means of proving 
+origin
+ and 
+authenticity
+ .
+ ----------------------------------7-----------------------
+ A 
+P2PKH
+ transaction in Bitcoin with one input and one output is the simplest form of a Bitcoin transaction. Here funds are locked to an address which is simply a double 
+hash
+ of a 
+public
+ key. Unlocking those funds so they can be moved means providing a locking 
+script
+ that contains the 
+public
+ key used to create the address and a signature created by the corresponding 
+private
+ key.
+ ---------------------------8----------------------------------------
+ b.
+Other nodes on the network would find the transaction to be invalid
+-------------------------------9---------------------------------
+Bitcoin uses ECDSA, or 
+Elliptic
+ Curve Digital Signature Algorithm, to create signatures. These digital signatures prove that the transaction, or specific parts of the transaction, have not and cannot be 
+modified
+ by anyone after it has been 
+signed
+ .
+ -------------------------------10----------------------------------
+ c.
+secp256k1
